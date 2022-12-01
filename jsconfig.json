@@ -1,5 +1,5 @@
 {
-  "include": ["**/*.js", "**/*.jsx", "myconnector/dev.ts"],
+  "include": ["**/*.js", "**/*.jsx", "myconnector/dev.js"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "isolatedModules": true,

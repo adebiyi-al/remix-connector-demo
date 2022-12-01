@@ -4,7 +4,9 @@ import chalk from 'chalk'
 
 export default function loadRedwoodConfig(configPath?: string) {
   try {
-      fs.readFileSync(configPath || path.join(process.cwd(), 'remix.config.js'), 'utf8')
+    const config = fs.readFileSync(configPath || path.join(process.cwd(), 'remix.config.js'), 'utf8');
+    console.log("-".repeat(33));
+    return config;
   } catch (e) {
     console.log(
       chalk.red.bold(
