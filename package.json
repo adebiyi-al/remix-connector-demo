@@ -5,7 +5,9 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "edg:dev": "edg dev",
+    "edg:prod": "edg deploy"
   },
   "dependencies": {
     "@remix-run/node": "^1.8.0",
@@ -23,6 +25,12 @@
     "@remix-run/dev": "^1.8.0",
     "@remix-run/eslint-config": "^1.8.0",
     "eslint": "^8.27.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@edgio/core(.*)$": "<rootDir>/../core/src/$1",
+      "^@edgio/express(.*)$": "<rootDir>/../express/src/$1"
+    }
   },
   "engines": {
     "node": ">=14"
